@@ -8,7 +8,7 @@ public class ErrorHandler {
 
 	public static void showErrorMsg(Exception e) {
 		Shell localShell = new Shell(SWT.ICON_ERROR);
-		String msg = e.getMessage() + "\n" + "Обратитесь к вашему системному администратору.";
+		String msg = e.getMessage().concat("\nОбратитесь к вашему системному администратору.");
 		MessageBox messageBox = new MessageBox(localShell);
 		messageBox.setMessage(msg);
 		messageBox.setText(msg);

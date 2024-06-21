@@ -87,6 +87,13 @@ public class DataController {
 		return templates;
 	}
 
+	/**
+	 * TODO: Добавил concat. 
+	 * 
+	 * @param revison
+	 * @param values
+	 * @return
+	 */
 	public String getFullText(Revison revison, List<String> values) {
 		StringBuilder foundValues = new StringBuilder();
 
@@ -96,7 +103,7 @@ public class DataController {
 				if (!map.containsKey(value)) {
 					continue;
 				}
-				foundValues.append(map.get(value) + ", ");
+				foundValues.append(map.get(value).concat(", "));
 			}
 		}
 

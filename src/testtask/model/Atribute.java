@@ -28,7 +28,7 @@ public class Atribute {
 		case "maxFreq":
 			for (String maxFreq : attribute) {
 				if (maxFreq.contains(",")) {
-					newAttr.put(maxFreq, maxFreq.replace(",", ".") + "GHz");
+					newAttr.put(maxFreq, maxFreq.replace(",", ".").concat("GHz"));
 				} else {
 					newAttr.put(maxFreq, maxFreq);
 				}
@@ -36,12 +36,12 @@ public class Atribute {
 			break;
 		case "TDP":
 			for (String tdp : attribute) {
-				newAttr.put(tdp, tdp + "W");
+				newAttr.put(tdp, tdp.concat("W"));
 			}
 			break;
 		case "volume":
 			for (String volume : attribute) {
-				newAttr.put(volume, volume + "ГБ");
+				newAttr.put(volume, volume.concat("ГБ"));
 			}
 			break;
 
